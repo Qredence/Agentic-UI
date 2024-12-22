@@ -1,0 +1,44 @@
+{
+  "name": "@agentic-ui/core",
+  "version": "0.1.0",
+  "description": "Core design tokens and utilities for Agentic UI",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "src/styles"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --clean",
+    "lint": "eslint . --ext .ts,.tsx",
+    "test": "echo 'No tests'",
+    "publish": "npm publish --access public"
+  },
+  "keywords": [
+    "design-system",
+    "design-tokens",
+    "theme",
+    "ui",
+    "agentic-ui",
+    "react"
+  ],
+  "author": "Codeium",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "tsup": "^8.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codeium/agentic-ui"
+  },
+  "bugs": {
+    "url": "https://github.com/codeium/agentic-ui/issues"
+  },
+  "homepage": "https://github.com/codeium/agentic-ui#readme"
+}

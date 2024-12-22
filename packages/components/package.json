@@ -1,0 +1,57 @@
+{
+  "name": "@agentic-ui/components",
+  "version": "0.1.0",
+  "description": "React components for Agentic UI",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --clean",
+    "lint": "eslint . --ext .ts,.tsx",
+    "test": "echo 'No tests'",
+    "publish": "npm publish --access public"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "framer-motion": ">=10",
+    "@nextui-org/react": ">=2"
+  },
+  "dependencies": {
+    "@agentic-ui/core": "0.1.0",
+    "framer-motion": "^10.16.16",
+    "@nextui-org/react": "^2.2.9",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
+    "tailwind-merge": "^2.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.43",
+    "tsup": "^8.0.2",
+    "typescript": "^5.3.3",
+    "tailwindcss": "^3.4.0"
+  },
+  "keywords": [
+    "react",
+    "components",
+    "ui",
+    "agentic-ui",
+    "design-system"
+  ],
+  "author": "Codeium",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codeium/agentic-ui"
+  },
+  "bugs": {
+    "url": "https://github.com/codeium/agentic-ui/issues"
+  },
+  "homepage": "https://github.com/codeium/agentic-ui#readme"
+}

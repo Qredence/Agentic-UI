@@ -1,0 +1,28 @@
+{
+  "name": "agentic-ui-monorepo",
+  "private": true,
+  "version": "0.1.0",
+  "license": "MIT",
+  "workspaces": [
+    "packages/core",
+    "packages/components"
+  ],
+  "scripts": {
+    "dev": "yarn workspace docs dev",
+    "build": "yarn workspaces run build",
+    "lint": "eslint . --ext .ts,.tsx",
+    "format": "prettier --write .",
+    "test": "yarn workspaces run test",
+    "publish-packages": "yarn workspaces run publish"
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.1.1",
+    "typescript": "^5.3.3",
+    "turbo": "^1.12.4",
+    "tailwindcss": "^3.4.0",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32"
+  }
+}

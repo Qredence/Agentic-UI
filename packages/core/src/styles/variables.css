@@ -1,0 +1,144 @@
+:root {
+  /* Colors */
+  --color-primary: #6246EA;
+  --color-secondary: #A594F9;
+  --color-tertiary: #494553;
+  --color-accent: #00B5E2;
+
+  --color-success: #34A853;
+  --color-warning: #F9AB00;
+  --color-error: #EA4335;
+
+  --color-background-primary: #1A1A1A;
+  --color-background-secondary: #2B2B2B;
+  --color-background-tertiary: #494553;
+
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #B3B3B3;
+  --color-text-disabled: #555555;
+
+  --color-border-default: #444444;
+  --color-border-secondary: #333333;
+
+  --color-surface: #2B2B2B;
+  --color-overlay: rgba(0, 0, 0, 0.5);
+
+  /* Typography */
+  --font-base: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: 'Fira Code', Consolas, Monaco, "Andale Mono", monospace;
+
+  --font-size-xs: 12px;
+  --font-size-sm: 13px;
+  --font-size-md: 14px;
+  --font-size-lg: 16px;
+  --font-size-xl: 18px;
+  --font-size-h1: 24px;
+  --font-size-h2: 20px;
+  --font-size-h3: 18px;
+
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+
+  --line-height-base: 1.4;
+  --line-height-relaxed: 1.6;
+
+  --letter-spacing-tight: -0.01em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.01em;
+
+  /* Spacing */
+  --spacing-xxs: 2px;
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-lg: 16px;
+  --spacing-xl: 20px;
+  --spacing-xxl: 24px;
+
+  /* Border Radius */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 10px;
+  --radius-xl: 12px;
+  --radius-pill: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0px 1px 3px rgba(0, 0, 0, 0.12);
+  --shadow-md: 0px 2px 6px rgba(0, 0, 0, 0.16);
+  --shadow-lg: 0px 4px 12px rgba(0, 0, 0, 0.18);
+
+  /* Borders */
+  --border-width: 1px;
+  --border-style: solid;
+
+  /* Z-Index */
+  --z-index-base: 1;
+  --z-index-dropdown: 1000;
+  --z-index-sticky: 1100;
+  --z-index-fixed: 1200;
+  --z-index-overlay: 1300;
+  --z-index-modal: 1400;
+  --z-index-popover: 1500;
+  --z-index-tooltip: 1600;
+
+  /* Component-specific variables */
+  --button-height-sm: 30px;
+  --button-height-md: 36px;
+  --button-height-lg: 42px;
+  --button-padding: 12px;
+  --button-gap: 8px;
+  --button-icon-size-sm: 14px;
+  --button-icon-size-md: 16px;
+  --button-icon-size-lg: 18px;
+
+  --input-height-sm: 30px;
+  --input-height-md: 36px;
+  --input-height-lg: 42px;
+  --input-padding: 12px;
+  --input-icon-size-sm: 14px;
+  --input-icon-size-md: 16px;
+  --input-icon-size-lg: 18px;
+
+  --select-max-height: 300px;
+  --select-option-height: 36px;
+  --select-chevron-size: 16px;
+
+  --card-padding: 12px;
+  --card-gap: 16px;
+  --card-header-padding: 16px;
+  --card-body-padding: 16px;
+  --card-footer-padding: 16px;
+
+  --chat-message-max-width: 70%;
+  --chat-message-avatar-size: 28px;
+  --chat-message-avatar-gap: 12px;
+  --chat-message-timestamp-size: 12px;
+  --chat-message-action-icon-size: 16px;
+
+  --trace-step-indent: 20px;
+  --trace-step-icon-size: 16px;
+  --trace-step-gap: 8px;
+
+  --modal-width-sm: 400px;
+  --modal-width-md: 600px;
+  --modal-width-lg: 800px;
+  --modal-header-height: 48px;
+  --modal-footer-height: 64px;
+
+  --toolbar-height: 48px;
+  --toolbar-button-size: 32px;
+  --toolbar-icon-size: 16px;
+
+  --settings-panel-width: 400px;
+  --settings-panel-section-gap: 24px;
+  --settings-panel-title-size: 18px;
+  --settings-panel-label-size: 14px;
+  --settings-panel-description-size: 12px;
+
+  --dropdown-min-width: 180px;
+  --dropdown-max-height: 300px;
+  --dropdown-item-height: 36px;
+  --dropdown-item-padding: 12px;
+}
