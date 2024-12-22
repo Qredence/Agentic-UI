@@ -87,8 +87,8 @@ yarn format
 
 ## Contributing
 
-We welcome contributions! Please see our contributing guide for details.
+We welcome contributions! Please see our [contributing guide](CONTRIBUTING.md) for details.
 
 ## License
 
-MIT 
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
