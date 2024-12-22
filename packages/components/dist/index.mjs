@@ -122,18 +122,18 @@ var AgentMessage = ({
 }) => {
   const messageStyles = {
     display: "flex",
-    gap: theme2.spacing[4],
-    padding: theme2.spacing[4],
-    backgroundColor: theme2.background.secondary,
+    gap: theme2.spacing.md,
+    padding: theme2.spacing.md,
+    backgroundColor: theme2.colors.background.secondary,
     borderRadius: theme2.radius.lg,
-    color: theme2.text.primary,
+    color: theme2.colors.text.primary,
     ...style
   };
   const avatarStyles = {
     width: "40px",
     height: "40px",
     borderRadius: "50%",
-    backgroundColor: theme2.colors.agent[role],
+    backgroundColor: theme2.colors.primary,
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
@@ -143,16 +143,16 @@ var AgentMessage = ({
     flex: 1,
     display: "flex",
     flexDirection: "column",
-    gap: theme2.spacing[2]
+    gap: theme2.spacing.sm
   };
   const expandableStyles = {
-    backgroundColor: theme2.background.tertiary,
+    backgroundColor: theme2.colors.background.tertiary,
     borderRadius: theme2.radius.md,
-    padding: theme2.spacing[3],
-    marginTop: theme2.spacing[2],
+    padding: theme2.spacing.md,
+    marginTop: theme2.spacing.sm,
     cursor: "pointer"
   };
-  return /* @__PURE__ */ React3.createElement("div", { className, style: messageStyles }, /* @__PURE__ */ React3.createElement("div", { style: avatarStyles }, typeof avatar === "string" ? /* @__PURE__ */ React3.createElement("img", { src: avatar, alt: `${role} avatar`, style: { width: "100%", height: "100%", borderRadius: "50%" } }) : avatar || role.charAt(0).toUpperCase()), /* @__PURE__ */ React3.createElement("div", { style: contentStyles }, /* @__PURE__ */ React3.createElement("div", { style: { fontSize: theme2.fontSizes.sm, color: theme2.text.secondary } }, role.charAt(0).toUpperCase() + role.slice(1), timestamp && /* @__PURE__ */ React3.createElement("span", { style: { marginLeft: theme2.spacing[2] } }, timestamp)), /* @__PURE__ */ React3.createElement("div", { style: { fontSize: theme2.fontSizes.md } }, content), reasoning && /* @__PURE__ */ React3.createElement(
+  return /* @__PURE__ */ React3.createElement("div", { className, style: messageStyles }, /* @__PURE__ */ React3.createElement("div", { style: avatarStyles }, typeof avatar === "string" ? /* @__PURE__ */ React3.createElement("img", { src: avatar, alt: `${role} avatar`, style: { width: "100%", height: "100%", borderRadius: "50%" } }) : avatar || role.charAt(0).toUpperCase()), /* @__PURE__ */ React3.createElement("div", { style: contentStyles }, /* @__PURE__ */ React3.createElement("div", { style: { fontSize: theme2.typography.sm, color: theme2.colors.text.secondary } }, role.charAt(0).toUpperCase() + role.slice(1), timestamp && /* @__PURE__ */ React3.createElement("span", { style: { marginLeft: theme2.spacing.sm } }, timestamp)), /* @__PURE__ */ React3.createElement("div", { style: { fontSize: theme2.typography.md } }, content), reasoning && /* @__PURE__ */ React3.createElement(
     "div",
     {
       style: expandableStyles,
@@ -163,7 +163,7 @@ var AgentMessage = ({
       alignItems: "center",
       justifyContent: "space-between"
     } }, /* @__PURE__ */ React3.createElement("span", null, "Reasoning"), /* @__PURE__ */ React3.createElement("span", null, reasoning.isExpanded ? "\u25BC" : "\u25B6")),
-    /* @__PURE__ */ React3.createElement(Collapse, { isOpen: reasoning.isExpanded || false }, /* @__PURE__ */ React3.createElement("div", { style: { color: theme2.text.secondary, marginTop: theme2.spacing[2] } }, reasoning.thoughts.map((thought, index) => /* @__PURE__ */ React3.createElement("div", { key: index, style: { marginBottom: theme2.spacing[2] } }, thought))))
+    /* @__PURE__ */ React3.createElement(Collapse, { isOpen: reasoning.isExpanded || false }, /* @__PURE__ */ React3.createElement("div", { style: { color: theme2.colors.text.secondary, marginTop: theme2.spacing.sm } }, reasoning.thoughts.map((thought, index) => /* @__PURE__ */ React3.createElement("div", { key: index, style: { marginBottom: theme2.spacing.sm } }, thought))))
   ), toolCalls == null ? void 0 : toolCalls.map((toolCall, index) => /* @__PURE__ */ React3.createElement(
     "div",
     {
@@ -176,20 +176,20 @@ var AgentMessage = ({
       alignItems: "center",
       justifyContent: "space-between"
     } }, /* @__PURE__ */ React3.createElement("span", null, toolCall.tool), /* @__PURE__ */ React3.createElement("span", null, toolCall.isExpanded ? "\u25BC" : "\u25B6")),
-    /* @__PURE__ */ React3.createElement(Collapse, { isOpen: toolCall.isExpanded || false }, /* @__PURE__ */ React3.createElement("div", { style: { color: theme2.text.secondary, marginTop: theme2.spacing[2] } }, /* @__PURE__ */ React3.createElement("pre", { style: {
-      fontFamily: theme2.fonts.mono,
-      fontSize: theme2.fontSizes.sm,
+    /* @__PURE__ */ React3.createElement(Collapse, { isOpen: toolCall.isExpanded || false }, /* @__PURE__ */ React3.createElement("div", { style: { color: theme2.colors.text.secondary, marginTop: theme2.spacing.sm } }, /* @__PURE__ */ React3.createElement("pre", { style: {
+      fontFamily: "monospace",
+      fontSize: theme2.typography.sm,
       overflow: "auto",
-      padding: theme2.spacing[2],
-      backgroundColor: theme2.background.primary,
+      padding: theme2.spacing.sm,
+      backgroundColor: theme2.colors.background.primary,
       borderRadius: theme2.radius.sm,
-      margin: `${theme2.spacing[2]} 0`
+      margin: `${theme2.spacing.sm} 0`
     } }, JSON.stringify(toolCall.args, null, 2)), toolCall.result && /* @__PURE__ */ React3.createElement("pre", { style: {
-      fontFamily: theme2.fonts.mono,
-      fontSize: theme2.fontSizes.sm,
+      fontFamily: "monospace",
+      fontSize: theme2.typography.sm,
       overflow: "auto",
-      padding: theme2.spacing[2],
-      backgroundColor: theme2.background.primary,
+      padding: theme2.spacing.sm,
+      backgroundColor: theme2.colors.background.primary,
       borderRadius: theme2.radius.sm
     } }, toolCall.result)))
   ))));

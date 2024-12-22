@@ -164,18 +164,18 @@ var AgentMessage = ({
 }) => {
   const messageStyles = {
     display: "flex",
-    gap: import_core2.theme.spacing[4],
-    padding: import_core2.theme.spacing[4],
-    backgroundColor: import_core2.theme.background.secondary,
+    gap: import_core2.theme.spacing.md,
+    padding: import_core2.theme.spacing.md,
+    backgroundColor: import_core2.theme.colors.background.secondary,
     borderRadius: import_core2.theme.radius.lg,
-    color: import_core2.theme.text.primary,
+    color: import_core2.theme.colors.text.primary,
     ...style
   };
   const avatarStyles = {
     width: "40px",
     height: "40px",
     borderRadius: "50%",
-    backgroundColor: import_core2.theme.colors.agent[role],
+    backgroundColor: import_core2.theme.colors.primary,
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
@@ -185,16 +185,16 @@ var AgentMessage = ({
     flex: 1,
     display: "flex",
     flexDirection: "column",
-    gap: import_core2.theme.spacing[2]
+    gap: import_core2.theme.spacing.sm
   };
   const expandableStyles = {
-    backgroundColor: import_core2.theme.background.tertiary,
+    backgroundColor: import_core2.theme.colors.background.tertiary,
     borderRadius: import_core2.theme.radius.md,
-    padding: import_core2.theme.spacing[3],
-    marginTop: import_core2.theme.spacing[2],
+    padding: import_core2.theme.spacing.md,
+    marginTop: import_core2.theme.spacing.sm,
     cursor: "pointer"
   };
-  return /* @__PURE__ */ import_react3.default.createElement("div", { className, style: messageStyles }, /* @__PURE__ */ import_react3.default.createElement("div", { style: avatarStyles }, typeof avatar === "string" ? /* @__PURE__ */ import_react3.default.createElement("img", { src: avatar, alt: `${role} avatar`, style: { width: "100%", height: "100%", borderRadius: "50%" } }) : avatar || role.charAt(0).toUpperCase()), /* @__PURE__ */ import_react3.default.createElement("div", { style: contentStyles }, /* @__PURE__ */ import_react3.default.createElement("div", { style: { fontSize: import_core2.theme.fontSizes.sm, color: import_core2.theme.text.secondary } }, role.charAt(0).toUpperCase() + role.slice(1), timestamp && /* @__PURE__ */ import_react3.default.createElement("span", { style: { marginLeft: import_core2.theme.spacing[2] } }, timestamp)), /* @__PURE__ */ import_react3.default.createElement("div", { style: { fontSize: import_core2.theme.fontSizes.md } }, content), reasoning && /* @__PURE__ */ import_react3.default.createElement(
+  return /* @__PURE__ */ import_react3.default.createElement("div", { className, style: messageStyles }, /* @__PURE__ */ import_react3.default.createElement("div", { style: avatarStyles }, typeof avatar === "string" ? /* @__PURE__ */ import_react3.default.createElement("img", { src: avatar, alt: `${role} avatar`, style: { width: "100%", height: "100%", borderRadius: "50%" } }) : avatar || role.charAt(0).toUpperCase()), /* @__PURE__ */ import_react3.default.createElement("div", { style: contentStyles }, /* @__PURE__ */ import_react3.default.createElement("div", { style: { fontSize: import_core2.theme.typography.sm, color: import_core2.theme.colors.text.secondary } }, role.charAt(0).toUpperCase() + role.slice(1), timestamp && /* @__PURE__ */ import_react3.default.createElement("span", { style: { marginLeft: import_core2.theme.spacing.sm } }, timestamp)), /* @__PURE__ */ import_react3.default.createElement("div", { style: { fontSize: import_core2.theme.typography.md } }, content), reasoning && /* @__PURE__ */ import_react3.default.createElement(
     "div",
     {
       style: expandableStyles,
@@ -205,7 +205,7 @@ var AgentMessage = ({
       alignItems: "center",
       justifyContent: "space-between"
     } }, /* @__PURE__ */ import_react3.default.createElement("span", null, "Reasoning"), /* @__PURE__ */ import_react3.default.createElement("span", null, reasoning.isExpanded ? "\u25BC" : "\u25B6")),
-    /* @__PURE__ */ import_react3.default.createElement(Collapse, { isOpen: reasoning.isExpanded || false }, /* @__PURE__ */ import_react3.default.createElement("div", { style: { color: import_core2.theme.text.secondary, marginTop: import_core2.theme.spacing[2] } }, reasoning.thoughts.map((thought, index) => /* @__PURE__ */ import_react3.default.createElement("div", { key: index, style: { marginBottom: import_core2.theme.spacing[2] } }, thought))))
+    /* @__PURE__ */ import_react3.default.createElement(Collapse, { isOpen: reasoning.isExpanded || false }, /* @__PURE__ */ import_react3.default.createElement("div", { style: { color: import_core2.theme.colors.text.secondary, marginTop: import_core2.theme.spacing.sm } }, reasoning.thoughts.map((thought, index) => /* @__PURE__ */ import_react3.default.createElement("div", { key: index, style: { marginBottom: import_core2.theme.spacing.sm } }, thought))))
   ), toolCalls == null ? void 0 : toolCalls.map((toolCall, index) => /* @__PURE__ */ import_react3.default.createElement(
     "div",
     {
@@ -218,20 +218,20 @@ var AgentMessage = ({
       alignItems: "center",
       justifyContent: "space-between"
     } }, /* @__PURE__ */ import_react3.default.createElement("span", null, toolCall.tool), /* @__PURE__ */ import_react3.default.createElement("span", null, toolCall.isExpanded ? "\u25BC" : "\u25B6")),
-    /* @__PURE__ */ import_react3.default.createElement(Collapse, { isOpen: toolCall.isExpanded || false }, /* @__PURE__ */ import_react3.default.createElement("div", { style: { color: import_core2.theme.text.secondary, marginTop: import_core2.theme.spacing[2] } }, /* @__PURE__ */ import_react3.default.createElement("pre", { style: {
-      fontFamily: import_core2.theme.fonts.mono,
-      fontSize: import_core2.theme.fontSizes.sm,
+    /* @__PURE__ */ import_react3.default.createElement(Collapse, { isOpen: toolCall.isExpanded || false }, /* @__PURE__ */ import_react3.default.createElement("div", { style: { color: import_core2.theme.colors.text.secondary, marginTop: import_core2.theme.spacing.sm } }, /* @__PURE__ */ import_react3.default.createElement("pre", { style: {
+      fontFamily: "monospace",
+      fontSize: import_core2.theme.typography.sm,
       overflow: "auto",
-      padding: import_core2.theme.spacing[2],
-      backgroundColor: import_core2.theme.background.primary,
+      padding: import_core2.theme.spacing.sm,
+      backgroundColor: import_core2.theme.colors.background.primary,
       borderRadius: import_core2.theme.radius.sm,
-      margin: `${import_core2.theme.spacing[2]} 0`
+      margin: `${import_core2.theme.spacing.sm} 0`
     } }, JSON.stringify(toolCall.args, null, 2)), toolCall.result && /* @__PURE__ */ import_react3.default.createElement("pre", { style: {
-      fontFamily: import_core2.theme.fonts.mono,
-      fontSize: import_core2.theme.fontSizes.sm,
+      fontFamily: "monospace",
+      fontSize: import_core2.theme.typography.sm,
       overflow: "auto",
-      padding: import_core2.theme.spacing[2],
-      backgroundColor: import_core2.theme.background.primary,
+      padding: import_core2.theme.spacing.sm,
+      backgroundColor: import_core2.theme.colors.background.primary,
       borderRadius: import_core2.theme.radius.sm
     } }, toolCall.result)))
   ))));
