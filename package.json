@@ -1,11 +1,13 @@
 {
-  "name": "agentic-ui-monorepo",
+  "name": "agentic-ui",
   "private": true,
   "version": "0.1.0",
   "license": "MIT",
   "workspaces": [
     "packages/core",
-    "packages/components"
+    "packages/components",
+    "packages/utils",
+    "packages/docs"
   ],
   "scripts": {
     "dev": "yarn workspace docs dev",
