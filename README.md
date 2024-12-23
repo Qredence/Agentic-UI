@@ -1,6 +1,9 @@
 # Agentic UI
+> [!CAUTION]
+> Not Production Ready, don't use it in your workload yet !.
 
-A modern, accessible React component library designed for AI-powered interfaces. Built with TypeScript and styled with a beautiful dark theme.
+
+A modern, accessible React component library designed for AI-powered interfaces. 
 
 ## Features
 
