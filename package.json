@@ -5,7 +5,8 @@
   "license": "MIT",
   "workspaces": [
     "packages/core",
-    "packages/components"
+    "packages/components",
+    "packages/docs"
   ],
   "scripts": {
     "dev": "yarn workspace docs dev",
@@ -16,13 +17,17 @@
     "publish-packages": "yarn workspaces run publish"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.16",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
+    "postcss": "^8.4.32",
     "prettier": "^3.1.1",
-    "typescript": "^5.3.3",
-    "turbo": "^1.12.4",
     "tailwindcss": "^3.4.0",
-    "autoprefixer": "^10.4.16",
-    "postcss": "^8.4.32"
-  }
+    "turbo": "^1.12.4",
+    "typescript": "^5.3.3"
+  },
+  "description": "Agentic UI Kit Open-Source",
+  "main": "index.js",
+  "repository": "https://github.com/Qredence/Agentic-UI.git",
+  "author": "\"Zachary\" <zachary@qredence.ai>"
 }
